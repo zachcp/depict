@@ -1,7 +1,7 @@
 Package: depict
 Type: Package
 Title: Draw Beautiful Molecular Structures
-Version: 0.1.1
+Version: 0.5.0
 Authors@R: c(person('Zachary', 'Charlop-Powers', role=c('cre','aut',"cph"), email='zach.charlop.powers@gmail.com'))
 Description: Generate images of molecules using the Depiction API of  the 'Chemistry Development Kit'. 
 License: LGPL
