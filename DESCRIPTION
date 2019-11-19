@@ -14,5 +14,5 @@ Depends:
 Imports:
     png,
     magrittr
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 7.0.0
 Suggests: testthat

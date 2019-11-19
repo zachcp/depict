@@ -11,7 +11,7 @@ add_terminal_carbons(dg, zoom = 1)
 \arguments{
 \item{dg}{a Depiction Generator}
 
-\item{a}{Depiction Generator}
+\item{zoom}{integer}
 }
 \description{
 add terminal carbons

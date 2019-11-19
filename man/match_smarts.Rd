@@ -7,7 +7,11 @@
 match_smarts(smarts, mol, limit = 10)
 }
 \arguments{
-\item{limit}{}
+\item{smarts}{Required. a smarts string}
+
+\item{mol}{Required. an r/CDK AtomContainer}
+
+\item{limit}{Optional. Default \code{10}}
 }
 \value{
 a hashset of atoms and bonds

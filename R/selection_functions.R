@@ -1,9 +1,10 @@
 #' match SMARTs
 #'
-#' @param smarts
-#' @param mol
-#' @param limit
-#'
+#' @param smarts Required. a smarts string
+#' @param mol Required. an r/CDK AtomContainer
+#' @param limit Optional. Default \code{10}
+#' 
+#' @importFrom rJava J
 #' @return a hashset of atoms and bonds
 #' @export
 #'

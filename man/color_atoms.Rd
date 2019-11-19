@@ -6,6 +6,9 @@
 \usage{
 color_atoms(dg)
 }
+\arguments{
+\item{dg#'}{}
+}
 \description{
 color atoms
 }

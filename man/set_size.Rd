@@ -7,7 +7,11 @@
 set_size(dg, width, height)
 }
 \arguments{
-\item{a}{Depiction Generator}
+\item{dg}{a Depiction Generator}
+
+\item{width}{width}
+
+\item{height}{height}
 }
 \description{
 set_size

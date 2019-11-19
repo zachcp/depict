@@ -7,7 +7,7 @@
 outerglow(dg)
 }
 \arguments{
-\item{a}{Depiction Generator}
+\item{dg}{a Depiction Generator}
 }
 \description{
 outerglow
