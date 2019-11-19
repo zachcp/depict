@@ -10,7 +10,8 @@ LazyData: TRUE
 Depends:
     rJava (>= 0.9-9),
     rcdk (>= 3.3.8),
-    rcdklibs (>= 2.0)
+    rcdklibs (>= 2.0),
+    methods
 Imports:
     png,
     magrittr
