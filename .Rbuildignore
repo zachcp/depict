@@ -5,3 +5,4 @@
 ^Readme\.Rmd$
 ^Readme-.*\.png$
 Makefile
+docs/
