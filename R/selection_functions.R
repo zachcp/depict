@@ -5,6 +5,8 @@
 #' @param limit Optional. Default \code{10}
 #' 
 #' @importFrom rJava J
+#' @importFrom methods new
+#' 
 #' @return a hashset of atoms and bonds
 #' @export
 #'

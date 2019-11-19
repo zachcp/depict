@@ -6,6 +6,8 @@
 #' @param generatecoords Optional. Default \code{TRUE}. Whether
 #'  to generate coordinates from the smiles
 #' @param kekulise Optional. Boolean. Default \code{TRUE}
+#' 
+#' @importFrom methods new
 #' @export
 #'
 parse_smiles <- function(smi, generatecoords=TRUE, kekulise=TRUE) {
@@ -37,6 +39,7 @@ parse_smiles <- function(smi, generatecoords=TRUE, kekulise=TRUE) {
 #'
 #' @param molfile Required. A filepath to a MOLfile.
 #' @return an AtomContainer
+#' @importFrom rJava .jnew
 #' @export
 read_mol <- function(molfile) {
 
