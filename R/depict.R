@@ -2,7 +2,7 @@
 #'
 #' create the CDK depiction object that can be manipulated
 #'
-#' @importFrom  rJava .jnew
+#' @import rcdk
 #' @export
 depiction <- function() {
   .jnew("org/openscience/cdk/depict/DepictionGenerator")
@@ -102,7 +102,7 @@ depict <- function(dg, mol) {
 #' Highlight atoms
 #'
 #' @param dg Required. A Depiction Generator
-#' @param highlights Required. A list of CDK IOBJects, usually atoms or bonds
+#' @param atoms Required. A list of CDK IOBJects, usually atoms or bonds
 #' @param color Required. A java.awt.Color
 #' @export
 highlight_atoms <- function(dg, atoms, color) {
@@ -132,7 +132,6 @@ save_image <- function(molgrid, outfile) {
 #'
 #' @param molgrid Required. A MolGridDepiction. Usually obtained from
 #' the \code{depict} function.
-#' @param outfile Required. Filepath to the output
 #' @importFrom png readPNG
 #' @export
 #'
