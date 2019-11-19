@@ -3,10 +3,10 @@
 #' return a named list of SMARTS
 #' patterns for amino_acids
 #'
-#' \seealso{
+#' @seealso
 #'   \url{http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html}
 #'   \url{http://www.daylight.com/dayhtml_tutorials/languages/smarts/index.html}
-#' }
+#' 
 #'
 #' @export
 amino_acids <- function() {
