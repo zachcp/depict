@@ -3,6 +3,7 @@
 #' create the CDK depiction object that can be manipulated
 #'
 #' @import rcdk
+#' @import rcdklibs
 #' @export
 depiction <- function() {
   .jnew("org/openscience/cdk/depict/DepictionGenerator")
