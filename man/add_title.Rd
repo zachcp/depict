@@ -7,7 +7,7 @@
 add_title(dg)
 }
 \arguments{
-\item{dg}{a Depiction Generator}
+\item{dg}{Required. a Depiction Generator}
 }
 \description{
 add_title

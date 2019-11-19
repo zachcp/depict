@@ -7,7 +7,7 @@
 color_atoms(dg)
 }
 \arguments{
-\item{dg#'}{}
+\item{dg}{Required. A DepictionGenerator}
 }
 \description{
 color atoms

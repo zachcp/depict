@@ -9,9 +9,9 @@ add_terminal_carbons(dg, zoom = 1)
 add_terminal_carbons(dg, zoom = 1)
 }
 \arguments{
-\item{dg}{a Depiction Generator}
+\item{dg}{Required. a Depiction Generator}
 
-\item{zoom}{integer}
+\item{zoom}{Optional. integer}
 }
 \description{
 add terminal carbons

@@ -9,7 +9,7 @@ depiction <- function() {
 }
 #' color atoms
 #'
-#' @param dg#' 
+#' @param dg Required. A DepictionGenerator
 #' @importFrom  rJava .jcall
 #' @export
 color_atoms <- function(dg) {
@@ -20,7 +20,7 @@ color_atoms <- function(dg) {
 }
 #' outerglow
 #'
-#' @param dg a Depiction Generator
+#' @param dg Required. a Depiction Generator
 #' @importFrom  rJava .jcall
 #' @export
 outerglow <- function(dg) {
@@ -31,9 +31,9 @@ outerglow <- function(dg) {
 }
 #' set_size
 #'
-#' @param dg a Depiction Generator
-#' @param width width
-#' @param height height
+#' @param dg Required. a Depiction Generator
+#' @param width Required. width
+#' @param height Required. height
 #' @export
 set_size <- function(dg, width, height) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {
@@ -44,7 +44,7 @@ set_size <- function(dg, width, height) {
 }
 #' add_title
 #'
-#' @param dg a Depiction Generator
+#' @param dg Required. a Depiction Generator
 #' @export
 add_title <- function(dg) {
 
@@ -56,7 +56,7 @@ add_title <- function(dg) {
 }
 #' add terminal carbons
 #'
-#' @param dg a Depiction Generator
+#' @param dg Required. a Depiction Generator
 #' @importFrom  rJava .jcall
 #' @export
 add_terminal_carbons <- function(dg) {
@@ -68,8 +68,8 @@ add_terminal_carbons <- function(dg) {
 
 #' zoom
 #'
-#' @param dg a Depiction Generator
-#' @param zoom integer
+#' @param dg Required. a Depiction Generator
+#' @param zoom Optional. integer
 #' @export
 add_terminal_carbons <- function(dg, zoom=1) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {
