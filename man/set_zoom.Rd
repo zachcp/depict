@@ -12,5 +12,13 @@ set_zoom(dg, zoom = 1)
 \item{zoom}{Optional. Default \code{1}}
 }
 \description{
-set_zoom
+set_zoom applies a zoom to the \code{depiction}
+}
+\examples{
+pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+depiction() \%>\%
+  set_zoom(3) \%>\%
+  depict(pen) \%>\%
+  get_image()
+  
 }

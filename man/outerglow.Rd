@@ -10,5 +10,32 @@ outerglow(dg)
 \item{dg}{Required. a Depiction Generator}
 }
 \description{
-outerglow
+apply outerglow to a depiction generator created by \code{depict}
+}
+\examples{
+
+pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+lactam <- match_smarts("C1(=O)NCC1", pen)
+atms   <- pen$atoms()
+bnds   <- pen$bonds()
+color  <- J("java.awt.Color") 
+
+dep <- depiction() \%>\%
+  set_size(600,600) \%>\%
+  set_zoom(3) \%>\%
+  highlight_atoms(atms, color$LIGHT_GRAY) \%>\%
+  highlight_atoms(bnds, color$LIGHT_GRAY) \%>\%
+  highlight_atoms(lactam, color$RED)
+
+dep \%>\%
+  depict(pen) \%>\%
+  get_image() \%>\%
+  grid::grid.raster()
+
+dep \%>\%
+  outerglow() \%>\%
+  depict(pen) \%>\%
+  get_image() \%>\%
+  grid::grid.raster()
+  
 }

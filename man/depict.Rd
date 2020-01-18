@@ -12,5 +12,12 @@ depict(dg, mol)
 \item{mol}{Required. An AtomContainer}
 }
 \description{
-depict a molecule using the depiction generator.
+convert a \code{depiction} into an image.
+}
+\examples{
+
+pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+dep  <- depiction() 
+depict(dep, pen)
+
 }

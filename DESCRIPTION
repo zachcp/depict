@@ -8,15 +8,14 @@ License: LGPL
 LazyData: TRUE
 Depends:
     rJava (>= 0.9-9),
-    rcdk (>= 3.3.8),
     rcdklibs (>= 2.0),
-    methods
 Imports:
     png,
     magrittr
-RoxygenNote: 7.0.0
 Suggests: 
     testthat,
     knitr,
     rmarkdown
+RoxygenNote: 7.0.2
+Encoding: UTF-8
 VignetteBuilder: knitr

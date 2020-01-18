@@ -1,10 +1,12 @@
 ---
 title: "depict"
 output: rmarkdown::html_vignette
+date: "`r Sys.Date()`"
 vignette: >
   %\VignetteIndexEntry{depict}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  \usepackage[utf8]{inputenc}
 ---
 
 ```{r, include = FALSE}
@@ -14,29 +16,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-suppressMessages(library(depict))
-suppressMessages(library(magrittr))
-suppressMessages(library(grid))
-```
-
 
 # depict
 
-depict is an R wrapper around the wonderful [depiction generator api](https://cdk.github.io/cdk/1.5/docs/api/org/openscience/cdk/depict/DepictionGenerator.html) and it aims to allow R programers to create beautiful chemical structures using a succinct and composable API.  Depict relies on [The Chemistry Decelopment Kit](https://github.com/cdk/cdk) which it accesses via [rJava](https://github.com/s-u/rJava).
+depict is an R wrapper around the wonderful [depiction generator api](https://cdk.github.io/cdk/1.5/docs/api/org/openscience/cdk/depict/DepictionGenerator.html) and it aims to allow R programers to create beautiful chemical structures using a succinct and composable API.  Depict relies on [The Chemistry Development Kit](https://github.com/cdk/cdk) which it accesses via [rJava](https://github.com/s-u/rJava).
 
 
 ## Simple Depiction
 
-A simple wrapper around cdk's excellent depict module.
+A simple wrapper around [CDK's](https://cdk.github.io/) excellent [depiction generator](http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html) module.
 
-```{r warning=FALSE, message=FALSE, eval=FALSE}
+
+```{r}
 library(depict)
-library(magrittr)
 library(grid)
 
 # you must supply java colors 
 color <- J("java.awt.Color")
+
 
 # load in penicillin
 pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
@@ -69,7 +66,7 @@ depiction() %>%
 ## A Larger Example
 
 
-```{r message=FALSE, eval=FALSE}
+```{r}
 insulinmol <- system.file("molfiles/ChEBI_5931.mol", package="depict")
 insulin    <- read_mol(insulinmol)
 

@@ -12,3 +12,17 @@ color_atoms(dg)
 \description{
 color atoms
 }
+\examples{
+
+pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+
+depiction() \%>\%
+  set_size(600,600) \%>\%
+  set_zoom(3) \%>\%
+  color_atoms() \%>\%
+  depict(pen) \%>\%
+  get_image() \%>\%
+  grid::grid.raster()
+  
+
+}

@@ -4,17 +4,24 @@
 \alias{add_terminal_carbons}
 \title{add terminal carbons}
 \usage{
-add_terminal_carbons(dg, zoom = 1)
-
-add_terminal_carbons(dg, zoom = 1)
+add_terminal_carbons(dg)
 }
 \arguments{
 \item{dg}{Required. a Depiction Generator}
-
-\item{zoom}{Optional. integer}
 }
 \description{
 add terminal carbons
+}
+\examples{
 
-zoom
+pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+
+depiction() \%>\%
+  set_size(600, 600) \%>\%
+  set_zoom(3) \%>\%
+  add_terminal_carbons() \%>\%
+  depict(pen) \%>\%
+  get_image() \%>\%
+  grid::grid.raster()
+  
 }

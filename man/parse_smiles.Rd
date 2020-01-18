@@ -17,3 +17,7 @@ to generate coordinates from the smiles}
 \description{
 simple smiles parser
 }
+\examples{
+parse_smiles("CCCC")
+parse_smiles("C1CCCCC1")
+}

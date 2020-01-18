@@ -10,5 +10,16 @@ add_title(dg)
 \item{dg}{Required. a Depiction Generator}
 }
 \description{
-add_title
+add a title to the depiction. Uses names from the input files.
+}
+\examples{
+pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+
+depiction() \%>\%
+  set_size(600, 600) \%>\%
+  set_zoom(3) \%>\%
+  depict(pen) \%>\%
+  get_image() \%>\%
+  grid::grid.raster()
+  
 }

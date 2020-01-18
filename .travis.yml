@@ -1,0 +1,18 @@
+# R for travis
+
+os: linux
+language: R
+cache: packages
+
+before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+
+before_deploy:
+  - R CMD INSTALL .
+
+deploy:
+  provider: script
+  script: Rscript -e 'pkgdown::deploy_site_github(verbose = TRUE, ssh_id = Sys.getenv("TRAVIS_DEPLOY_KEY", ""))'
+  skip_cleanup: true
+  on:
+    branch: cran
+  

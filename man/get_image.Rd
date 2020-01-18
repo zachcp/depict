@@ -11,5 +11,13 @@ get_image(molgrid)
 the \code{depict} function.}
 }
 \description{
-get image
+get an image generated in Java as an R-accessible image.
+}
+\examples{
+
+pen      <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+depicted <- depiction() \%>\% depict(pen)
+image    <- get_image(depicted)
+grid::grid.raster(image)
+  
 }

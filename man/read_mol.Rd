@@ -13,5 +13,9 @@ read_mol(molfile)
 an AtomContainer
 }
 \description{
-Read a Molfile and return an AtomContainer
+Read a Molfile and return an AtomContainer that can be passed to \code{depict}.
+}
+\examples{
+insulinmol <- system.file("molfiles/ChEBI_5931.mol", package="depict")
+insulin    <- read_mol(insulinmol)
 }

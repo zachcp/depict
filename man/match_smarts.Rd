@@ -2,7 +2,7 @@
 % Please edit documentation in R/selection_functions.R
 \name{match_smarts}
 \alias{match_smarts}
-\title{match SMARTs}
+\title{match_smarts}
 \usage{
 match_smarts(smarts, mol, limit = 10)
 }
@@ -17,5 +17,12 @@ match_smarts(smarts, mol, limit = 10)
 a hashset of atoms and bonds
 }
 \description{
-match SMARTs
+Use a SMARTS pattern to find a match in a molecule. The
+output can be used in \code{highlight_atoms} to stylize
+portions of a chemical \code{depiction}.
+}
+\examples{
+pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+cav    <- parse_smiles("CN1C=NC2=C1C(=O)N(C(=O)N2C)C")
+lactam <- match_smarts("C1(=O)NCC1", pen)
 }

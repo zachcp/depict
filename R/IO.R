@@ -7,9 +7,12 @@
 #'  to generate coordinates from the smiles
 #' @param kekulise Optional. Boolean. Default \code{TRUE}
 #' 
-#' @importFrom methods new
+#' @importFrom rJava new
+#' @importFrom rJava J
 #' @export
-#'
+#' @examples 
+#' parse_smiles("CCCC")
+#' parse_smiles("C1CCCCC1")
 parse_smiles <- function(smi, generatecoords=TRUE, kekulise=TRUE) {
 
   SmilesParser <- J("org.openscience.cdk.smiles.SmilesParser")
@@ -17,7 +20,7 @@ parse_smiles <- function(smi, generatecoords=TRUE, kekulise=TRUE) {
   StructureDiagramGenerator <- J("org.openscience.cdk.layout.StructureDiagramGenerator")
 
   sinst <- SChemObjectBuilder$getInstance()
-  sp    <- new(SmilesParser, sinst)
+  sp    <- rJava::new(SmilesParser, sinst)
   sp$kekulise(kekulise)
   
   mol   <- sp$parseSmiles(smi)
@@ -35,12 +38,16 @@ parse_smiles <- function(smi, generatecoords=TRUE, kekulise=TRUE) {
 
 #' read_mol
 #'
-#' Read a Molfile and return an AtomContainer
+#' Read a Molfile and return an AtomContainer that can be passed to \code{depict}.
 #'
 #' @param molfile Required. A filepath to a MOLfile.
 #' @return an AtomContainer
 #' @importFrom rJava .jnew
 #' @export
+#' 
+#' @examples
+#' insulinmol <- system.file("molfiles/ChEBI_5931.mol", package="depict")
+#' insulin    <- read_mol(insulinmol)
 read_mol <- function(molfile) {
 
   jAtomContainer <- J("org.openscience.cdk.AtomContainer")

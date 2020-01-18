@@ -7,5 +7,19 @@
 depiction()
 }
 \description{
-create the CDK depiction object that can be manipulated
+create the CDK depiction generator object. this holds the vizual
+parameters that can them be applied to an object using
+the \code{depict} command.
+}
+\examples{
+
+pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
+
+depiction() \%>\%
+  set_size(600,600) \%>\%
+  set_zoom(3) \%>\%
+  depict(pen) \%>\%
+  get_image() \%>\%
+  grid::grid.raster()
+
 }

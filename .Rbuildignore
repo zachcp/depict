@@ -10,3 +10,8 @@ Makefile
 docs/
 ^CRAN-RELEASE$
 ^cran-comments\.md$
+^DEVELOPER.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.travis\.yml$
