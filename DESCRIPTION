@@ -3,7 +3,7 @@ Type: Package
 Title: Draw Beautiful Molecular Structures
 Version: 0.5.0
 Authors@R: c(person('Zachary', 'Charlop-Powers', role=c('cre','aut',"cph"), email='zach.charlop.powers@gmail.com'))
-Description: Generate images of molecules using the Depiction API of  the 'Chemistry Development Kit'. 
+Description: Generate images of molecules using the 'Depiction' <http://cdk.github.io/cdk/latest/docs/api/index.html?overview-summary.html> API of  the 'Chemistry Development Kit' <https://cdk.github.io/>. 
 License: LGPL
 LazyData: TRUE
 Depends:
