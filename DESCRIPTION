@@ -15,4 +15,8 @@ Imports:
     png,
     magrittr
 RoxygenNote: 7.0.0
-Suggests: testthat
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
