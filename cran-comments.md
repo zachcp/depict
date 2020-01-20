@@ -28,7 +28,7 @@ with angle brackets for auto-linking and no space after 'http:' and
 * Please add small executable examples in your Rd-files.
   * Done.  All of the code will run locally. The caveat here is that they are wrapped in \dontrun{} blocks due to an issue in during builds where Vignette building and test runnign fails. I believe this is due to the rJava/Java setup during the build step. The code runs as expected in the same environment that is used to build the packge.
 
-## Additional Changes since the original previous upload.
+## Additional Changes since the original upload.
 
 * Addition of a vignette.
 * Fix an import clash where rJava::new and methods::new were clashing and preventing proper evaluation example code.

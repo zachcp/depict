@@ -16,6 +16,7 @@ the \code{depict} function.}
 save the output of the \code{depict} function.
 }
 \examples{
+\dontrun{
 pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 lactam <- match_smarts("C1(=O)NCC1", pen)
 color  <- J("java.awt.Color")
@@ -24,5 +25,5 @@ depiction() \%>\%
   highlight_atoms(lactam, color$LIGHT_GRAY) \%>\%
   depict(pen) \%>\%
   save_image("penicillin.png")
-  
+}
 }
