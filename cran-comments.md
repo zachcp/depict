@@ -11,7 +11,7 @@
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: 'Zachary Charlop-Powers <zach.charlop.powers@gmail.com>'
 
-
+* There is an ERROR in the rHUB Windows build. This is due to rJava being unable to load, an upstream issue. However the `devtools::check_win*` all pass.
 
 ## Addressing Issues in 2 previous uploads.
 
