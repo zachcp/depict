@@ -133,8 +133,9 @@ the <code>depict</code> function.</p></td>
 <span class='no'>pen</span>      <span class='kw'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='st'>"CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin"</span>)
 <span class='no'>depicted</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='depiction.html'>depiction</a></span>() <span class='kw'>%&gt;%</span> <span class='fu'><a href='depict.html'>depict</a></span>(<span class='no'>pen</span>)
 <span class='no'>image</span>    <span class='kw'>&lt;-</span> <span class='fu'>get_image</span>(<span class='no'>depicted</span>)
-<span class='kw pkg'>grid</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.raster.html'>grid.raster</a></span>(<span class='no'>image</span>)</div><div class='img'><img src='get_image-1.png' alt='' width='700' height='433' /></div><div class='input'>  
-</div></pre>
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='kw pkg'>grid</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.raster.html'>grid.raster</a></span>(<span class='no'>image</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
