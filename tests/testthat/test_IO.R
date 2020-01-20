@@ -13,3 +13,13 @@ test_that("we can open MOL file", {
   expect_equal(attr(mol, "jclass"), "org/openscience/cdk/AtomContainer")
   expect_equal(attr(sdf, "jclass"), "org/openscience/cdk/AtomContainer")
 })
+
+
+test_that("we can open parse a SMILES string", {
+  
+  SMI1 <- parse_smiles("CCCCCC")
+  SMI2 <- parse_smiles("C1CCCCCCCCC1")
+  
+  expect_equal(attr(SMI1, "jclass"), "org/openscience/cdk/silent/AtomContainer")
+  expect_equal(attr(SMI2, "jclass"), "org/openscience/cdk/silent/AtomContainer")
+})
