@@ -130,13 +130,10 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>pen</span>  <span class='kw'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='st'>"CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin"</span>)
 
-<span class='fu'><a href='depiction.html'>depiction</a></span>() <span class='kw'>%&gt;%</span>
+<span class='no'>img</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='depiction.html'>depiction</a></span>() <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='set_size.html'>set_size</a></span>(<span class='fl'>600</span>, <span class='fl'>600</span>) <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='set_zoom.html'>set_zoom</a></span>(<span class='fl'>3</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='depict.html'>depict</a></span>(<span class='no'>pen</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='get_image.html'>get_image</a></span>() <span class='kw'>%&gt;%</span>
-  <span class='kw pkg'>grid</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/grid/grid.raster.html'>grid.raster</a></span>()</div><div class='img'><img src='add_title-1.png' alt='' width='700' height='433' /></div><div class='input'>  
-</div></pre>
+  <span class='fu'><a href='depict.html'>depict</a></span>(<span class='no'>pen</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
