@@ -36,4 +36,4 @@ with angle brackets for auto-linking and no space after 'http:' and
 * expand the tests
 * remove dependency on rCDK to avoid problem in one of the windows builds
 * add Readme.html to .Rbuildignore
-* add Readme.html to .Rbuildignore
+* put the `save_image` example code in a \dontrun{} block to avoid saving an image in the build directory.
