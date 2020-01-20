@@ -20,6 +20,8 @@ test_that("we can open parse a SMILES string", {
   SMI1 <- parse_smiles("CCCCCC")
   SMI2 <- parse_smiles("C1CCCCCCCCC1")
   
-  expect_equal(attr(SMI1, "jclass"), "org/openscience/cdk/silent/AtomContainer")
-  expect_equal(attr(SMI2, "jclass"), "org/openscience/cdk/silent/AtomContainer")
+  # note we currently expect either an AtomContainer of AtomContainer2
+  # see https://github.com/cdk/cdk/wiki/AtomContainer2
+  expect_match(attr(SMI1, "jclass"), "org/openscience/cdk/silent/AtomContainer*")
+  expect_match(attr(SMI2, "jclass"), "org/openscience/cdk/silent/AtomContainer*")
 })
