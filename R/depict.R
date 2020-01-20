@@ -115,12 +115,10 @@ set_size <- function(dg, width, height) {
 #' @examples 
 #' pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 #' 
-#' depiction() %>%
+#' img <- depiction() %>%
 #'   set_size(600, 600) %>%
 #'   set_zoom(3) %>%
-#'   depict(pen) %>%
-#'   get_image() %>%
-#'   grid::grid.raster()
+#'   depict(pen)
 #'   
 add_title <- function(dg) {
   
@@ -195,7 +193,7 @@ depict <- function(dg, mol) {
 #' color  <- J("java.awt.Color")
 #' 
 #' depiction() %>%
-#'   highlight_atoms(lactam, color$LIGHT_GRAY) %>%
+#'   highlight_atoms(lactam, color$RED) %>%
 #'   depict(pen)
 #'   
 highlight_atoms <- function(dg, atoms, color) {
@@ -275,10 +273,13 @@ get_image <- function(molgrid) {
 #' @export
 #' @examples 
 #' pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
-#' depiction() %>%
+#' img <- depiction() %>%
 #'   set_zoom(3) %>%
 #'   depict(pen)
 #'   
+#' img2 <- depiction() %>%
+#'   set_zoom(10) %>%
+#'   depict(pen)
 set_zoom <- function(dg, zoom=1) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {
     stop("highlight_atoms requires a Depiction Generator")

@@ -23,7 +23,7 @@ lactam <- match_smarts("C1(=O)NCC1", pen)
 color  <- J("java.awt.Color")
 
 depiction() \%>\%
-  highlight_atoms(lactam, color$LIGHT_GRAY) \%>\%
+  highlight_atoms(lactam, color$RED) \%>\%
   depict(pen)
   
 }

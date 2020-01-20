@@ -44,3 +44,6 @@ Maintainer: 'Zachary Charlop-Powers <zach.charlop.powers@gmail.com>'
                         user system elapsed ratio
   add_terminal_carbons 2.713  0.237   1.058 2.788
   * moved this code to a \dontrun{} block .
+
+* further modify example code to pass builds. (add_title, highlight_aotm, set_zoom)
+  
