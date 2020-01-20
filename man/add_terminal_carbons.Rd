@@ -14,6 +14,7 @@ add terminal carbons
 }
 \examples{
 
+\dontrun{
 pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 
 depiction() \%>\%
@@ -21,5 +22,6 @@ depiction() \%>\%
   set_zoom(3) \%>\%
   add_terminal_carbons() \%>\%
   depict(pen) 
-  
+}
+
 }

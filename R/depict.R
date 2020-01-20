@@ -136,6 +136,7 @@ add_title <- function(dg) {
 #' @export
 #' @examples 
 #' 
+#' \dontrun{
 #' pen  <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 #' 
 #' depiction() %>%
@@ -143,7 +144,8 @@ add_title <- function(dg) {
 #'   set_zoom(3) %>%
 #'   add_terminal_carbons() %>%
 #'   depict(pen) 
-#'   
+#' }
+#' 
 add_terminal_carbons <- function(dg) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {
     stop("add_terminal_carbons requires a Depiction Generator")
