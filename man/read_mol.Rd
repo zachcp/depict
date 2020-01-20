@@ -7,7 +7,7 @@
 read_mol(molfile)
 }
 \arguments{
-\item{molfile}{Required. A filepath to a MOLfile.}
+\item{molfile}{Required. A filepath to a Molfile.}
 }
 \value{
 an AtomContainer

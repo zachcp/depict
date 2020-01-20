@@ -6,9 +6,9 @@
 \alias{_PACKAGE}
 \title{Draw Beautiful Molecular Structures}
 \description{
-Generate images of molecules using the 'Depiction Generator' 
- <http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html> 
- API of  the 'Chemistry Development Kit' <https://cdk.github.io/>.
+Generate images of molecules using the
+\href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} 
+ API of  the \href{https://cdk.github.io/}{Chemistry Development Kit}
 }
 \author{
 \strong{Maintainer}: Zachary Charlop-Powers \email{zach.charlop.powers@gmail.com} [copyright holder]

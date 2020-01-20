@@ -42,7 +42,7 @@ suppressMessages(library(grid))
 
 ## Simple Depiction
 
-A simple wrapper around cdk's excellent depict module.
+A simple wrapper around CDK's excellent depict module.
 
 ```{r warning=FALSE, eval=FALSE}
 library(depict)

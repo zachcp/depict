@@ -9,11 +9,11 @@ checkJavaClass(jobj, klass)
 \arguments{
 \item{jobj}{Required. A Java Object}
 
-\item{klass}{Required. A string defining a java class}
+\item{klass}{Required. A string defining a Java class}
 }
 \value{
 Boolean
 }
 \description{
-check if an object is of a specified JavaClass
+check if an object is of the specified Java Class
 }

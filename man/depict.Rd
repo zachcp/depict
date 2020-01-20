@@ -7,9 +7,9 @@
 depict(dg, mol)
 }
 \arguments{
-\item{dg}{Required. A Depiction Generator}
+\item{dg}{Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}}
 
-\item{mol}{Required. An AtomContainer}
+\item{mol}{Required. An \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/AtomContainer.html}{AtomContainer} probably created by \code{parse_smiles} or \code{read_mol}}
 }
 \description{
 convert a \code{depiction} into an image.

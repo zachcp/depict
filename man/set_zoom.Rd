@@ -7,7 +7,7 @@
 set_zoom(dg, zoom = 1)
 }
 \arguments{
-\item{dg}{a Depiction Generator}
+\item{dg}{Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}#' @importFrom  rJava .jcall}
 
 \item{zoom}{Optional. Default \code{1}}
 }

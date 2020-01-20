@@ -7,7 +7,7 @@
 color_atoms(dg)
 }
 \arguments{
-\item{dg}{Required. A DepictionGenerator}
+\item{dg}{Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}}
 }
 \description{
 color atoms

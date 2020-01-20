@@ -7,14 +7,14 @@
 set_size(dg, width, height)
 }
 \arguments{
-\item{dg}{Required. a Depiction Generator}
+\item{dg}{Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}#' @param width Required. width}
 
-\item{width}{Required. width}
+\item{width}{Required. Integer.}
 
-\item{height}{Required. height}
+\item{height}{Required. Integer.}
 }
 \description{
-set canvas size for depictiongenerator
+set canvas size
 }
 \examples{
 

@@ -7,7 +7,7 @@
 add_terminal_carbons(dg)
 }
 \arguments{
-\item{dg}{Required. a Depiction Generator}
+\item{dg}{Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}#' @importFrom  rJava .jcall}
 }
 \description{
 add terminal carbons

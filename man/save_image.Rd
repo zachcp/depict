@@ -7,10 +7,10 @@
 save_image(molgrid, outfile)
 }
 \arguments{
-\item{molgrid}{Required. A MolGridDepiction. Usually obtained from
+\item{molgrid}{Required. A \code{MolGridDepiction}. Usually obtained from
 the \code{depict} function.}
 
-\item{outfile}{Required. Filepath to the output}
+\item{outfile}{Required. A file path.}
 }
 \description{
 save the output of the \code{depict} function.

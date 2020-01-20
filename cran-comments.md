@@ -5,9 +5,12 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 1 note
 
 * This is a new release.
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: 'Zachary Charlop-Powers <zach.charlop.powers@gmail.com>'
+
 
 
 ## Addressing Issues in a previous upload.
@@ -23,8 +26,12 @@ with angle brackets for auto-linking and no space after 'http:' and
 'https:'.
   * Done
 * Please add small executable examples in your Rd-files.
-  * Done.  All of the code will run lcoally. The caveat here is that they are wrapped in \dontrun{} blocks due to an issue in during builds where Vignette building and test runnign fails. I believe this is due to the rJava/Java setup during the build step. The code runs as expected in the same environment that is used to build the packge.
+  * Done.  All of the code will run locally. The caveat here is that they are wrapped in \dontrun{} blocks due to an issue in during builds where Vignette building and test runnign fails. I believe this is due to the rJava/Java setup during the build step. The code runs as expected in the same environment that is used to build the packge.
 
 ## Additional Changes since the previous upload.
 
 * Addition of a vignette.
+* Fix an import clash where rJava::new and methods::new were clashing and preventing proper evaluation example code.
+* update example code for all functions
+* expand the tests
+* remove dependency on rCDK to avoid problem in one of the windows builds

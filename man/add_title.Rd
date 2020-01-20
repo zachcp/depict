@@ -7,7 +7,7 @@
 add_title(dg)
 }
 \arguments{
-\item{dg}{Required. a Depiction Generator}
+\item{dg}{Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}}
 }
 \description{
 add a title to the depiction. Uses names from the input files.

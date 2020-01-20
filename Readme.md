@@ -1,6 +1,4 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # depict
 
 <!-- badges: start -->
@@ -30,7 +28,7 @@ devtools::install_github("CDK-R/depict")
 
 ## Simple Depiction
 
-A simple wrapper around cdk’s excellent depict module.
+A simple wrapper around CDK’s excellent depict module.
 
 ``` r
 library(depict)

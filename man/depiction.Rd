@@ -7,7 +7,7 @@
 depiction()
 }
 \description{
-create the CDK depiction generator object. this holds the vizual
+create the CDK depiction generator object. this holds the visual
 parameters that can them be applied to an object using
 the \code{depict} command.
 }
