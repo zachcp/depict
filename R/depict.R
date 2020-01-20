@@ -218,6 +218,7 @@ highlight_atoms <- function(dg, atoms, color) {
 #' @param outfile Required. A file path.
 #' @export
 #' @examples 
+#' \dontrun{
 #' pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 #' lactam <- match_smarts("C1(=O)NCC1", pen)
 #' color  <- J("java.awt.Color")
@@ -226,7 +227,7 @@ highlight_atoms <- function(dg, atoms, color) {
 #'   highlight_atoms(lactam, color$LIGHT_GRAY) %>%
 #'   depict(pen) %>%
 #'   save_image("penicillin.png")
-#'   
+#' }
 save_image <- function(molgrid, outfile) {
   if (!checkJavaClass(molgrid, "org/openscience/cdk/depict/MolGridDepiction")) {
     stop("highlight_atoms requires a Depiction Generator")

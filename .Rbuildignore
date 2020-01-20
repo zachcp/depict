@@ -5,6 +5,7 @@
 ^Readme\.Rmd$
 ^Readme-.*\.png$
 ^Readme.md$
+^Readme.html$
 License.txt
 Makefile
 docs/
