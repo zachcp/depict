@@ -26,4 +26,5 @@ depiction() \%>\%
   depict(pen) \%>\%
   save_image("penicillin.png")
 }
+
 }

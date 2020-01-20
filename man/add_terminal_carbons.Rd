@@ -20,8 +20,6 @@ depiction() \%>\%
   set_size(600, 600) \%>\%
   set_zoom(3) \%>\%
   add_terminal_carbons() \%>\%
-  depict(pen) \%>\%
-  get_image() \%>\%
-  grid::grid.raster()
+  depict(pen) 
   
 }

@@ -20,9 +20,7 @@ depiction() \%>\%
   set_size(600,600) \%>\%
   set_zoom(3) \%>\%
   color_atoms() \%>\%
-  depict(pen) \%>\%
-  get_image() \%>\%
-  grid::grid.raster()
+  depict(pen) 
   
 
 }

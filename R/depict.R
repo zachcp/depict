@@ -33,9 +33,7 @@ depiction <- function() {
 #'   set_size(600,600) %>%
 #'   set_zoom(3) %>%
 #'   color_atoms() %>%
-#'   depict(pen) %>%
-#'   get_image() %>%
-#'   grid::grid.raster()
+#'   depict(pen) 
 #'   
 #' 
 color_atoms <- function(dg) {
@@ -85,7 +83,6 @@ outerglow <- function(dg) {
 #' set_size
 #'
 #' set canvas size
-#' 
 #' 
 #' @param dg Required. A \href{http://cdk.github.io/cdk/latest/docs/api/org/openscience/cdk/depict/DepictionGenerator.html}{Depiction Generator} probably created by \code{depiction}#' @param width Required. width
 #' @param height Required. Integer.
@@ -145,9 +142,7 @@ add_title <- function(dg) {
 #'   set_size(600, 600) %>%
 #'   set_zoom(3) %>%
 #'   add_terminal_carbons() %>%
-#'   depict(pen) %>%
-#'   get_image() %>%
-#'   grid::grid.raster()
+#'   depict(pen) 
 #'   
 add_terminal_carbons <- function(dg) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {
@@ -199,9 +194,7 @@ depict <- function(dg, mol) {
 #' 
 #' depiction() %>%
 #'   highlight_atoms(lactam, color$LIGHT_GRAY) %>%
-#'   depict(pen) %>%
-#'   get_image() %>%
-#'   grid::grid.raster()
+#'   depict(pen)
 #'   
 highlight_atoms <- function(dg, atoms, color) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {
@@ -228,6 +221,7 @@ highlight_atoms <- function(dg, atoms, color) {
 #'   depict(pen) %>%
 #'   save_image("penicillin.png")
 #' }
+#' 
 save_image <- function(molgrid, outfile) {
   if (!checkJavaClass(molgrid, "org/openscience/cdk/depict/MolGridDepiction")) {
     stop("highlight_atoms requires a Depiction Generator")
@@ -249,7 +243,9 @@ save_image <- function(molgrid, outfile) {
 #' pen      <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 #' depicted <- depiction() %>% depict(pen)
 #' image    <- get_image(depicted)
+#' \dontrun{
 #' grid::grid.raster(image)
+#' }
 #'   
 get_image <- function(molgrid) {
   if (!checkJavaClass(molgrid, "org/openscience/cdk/depict/MolGridDepiction")) {
@@ -279,8 +275,7 @@ get_image <- function(molgrid) {
 #' pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 #' depiction() %>%
 #'   set_zoom(3) %>%
-#'   depict(pen) %>%
-#'   get_image()
+#'   depict(pen)
 #'   
 set_zoom <- function(dg, zoom=1) {
   if (!checkJavaClass(dg, "org/openscience/cdk/depict/DepictionGenerator")) {

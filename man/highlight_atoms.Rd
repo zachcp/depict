@@ -24,8 +24,6 @@ color  <- J("java.awt.Color")
 
 depiction() \%>\%
   highlight_atoms(lactam, color$LIGHT_GRAY) \%>\%
-  depict(pen) \%>\%
-  get_image() \%>\%
-  grid::grid.raster()
+  depict(pen)
   
 }

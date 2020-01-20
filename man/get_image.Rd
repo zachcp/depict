@@ -18,6 +18,8 @@ get an image generated in Java as an R-accessible image.
 pen      <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 depicted <- depiction() \%>\% depict(pen)
 image    <- get_image(depicted)
+\dontrun{
 grid::grid.raster(image)
+}
   
 }
