@@ -61,7 +61,7 @@ cav  <- parse_smiles("CN1C=NC2=C1C(=O)N(C(=O)N2C)C")
 # or a SMARTS-defined subregion
 atms <- pen$atoms()
 bnds <- pen$bonds()
-lactam <- match_smarts("C1(=O)NCC1", pen)
+lactam <- match_smarts(pen, "C1(=O)NCC1")
 
 # use piping to change the behavior as desired
 depiction() %>%
@@ -87,8 +87,8 @@ depiction() %>%
 insulinmol <- system.file("molfiles/ChEBI_5931.mol", package="depict")
 insulin    <- read_mol(insulinmol)
 
-cysteine <- match_smarts("C(=O)C(CS)N", insulin)
-xlinks   <- match_smarts("SS", insulin)
+cysteine <- match_smarts(insulin, "C(=O)C(CS)N")
+xlinks   <- match_smarts(insulin, "SS")
 
 dp <- depiction()%>% 
   set_size(700, 400) %>%
@@ -104,5 +104,21 @@ dp <- depiction()%>%
 
 ![](man/figures/insulin.png)
 
- 
+## Highlight Steroecenters
+
+```{r, message=FALSE, eval=FALSE} 
+mol    <- parse_smiles("C[C@H]([C@@H](C(=O)O)N)O")
+stereo <- depict::match_stereo(mol)
+
+
+depiction() %>%
+  highlight_atoms(stereo, color$RED) %>% 
+  set_zoom(3) %>%
+  depict(mol) %>%
+  get_image() %>%
+  grid::grid.raster() 
+  
+```
+
+![](man/figures/highlight_stereo.png)
 

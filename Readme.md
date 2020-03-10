@@ -1,36 +1,41 @@
+---
+output: github_document
+---
+
+
+
+
 
 # depict
 
 <!-- badges: start -->
-
-[![Travis build
-status](https://travis-ci.org/zachcp/depict.svg?branch=master)](https://travis-ci.org/zachcp/depict)
+[![Travis build status](https://travis-ci.org/zachcp/depict.svg?branch=master)](https://travis-ci.org/zachcp/depict)
 <!-- badges: end -->
-
-depict is an R wrapper around the wonderful depiction api written by
-[John May](https://github.com/johnmay). The entire
-[CDK](https://github.com/cdk) team, but especially John, have been
-steadily improving the visualization features of CDK. The depiction API
-is succinct and powerful and provides access to a vary large amount of
-the end-user desired functionality with a small number of composable
-functions. Because of the design of this API it is now relatively
-straightforward to design a simple streamlined interface to allow users
-to quickly and easily generate beautiful graphics.
+  
+depict is an R wrapper around the wonderful depiction api written by [John May](https://github.com/johnmay).  The entire [CDK](https://github.com/cdk) team, but especially
+John, have been steadily improving the visualization features of CDK. The depiction API is
+succinct and powerful and provides access to a vary large amount of the end-user desired functionality with a small number of composable functions. Because of the design of this API
+it is now relatively straightforward to design a simple streamlined interface to allow users to quickly and easily generate beautiful graphics.
 
 ## Installation
 
 You can install depict from github with:
 
-``` r
+
+```r
 # install.packages("devtools")
 devtools::install_github("CDK-R/depict")
 ```
 
+
+
+
 ## Simple Depiction
 
-A simple wrapper around CDK’s excellent depict module.
+A simple wrapper around CDK's excellent depict module.
 
-``` r
+
+```r
 library(depict)
 library(magrittr)
 library(grid)
@@ -47,7 +52,7 @@ cav  <- parse_smiles("CN1C=NC2=C1C(=O)N(C(=O)N2C)C")
 # or a SMARTS-defined subregion
 atms <- pen$atoms()
 bnds <- pen$bonds()
-lactam <- match_smarts("C1(=O)NCC1", pen)
+lactam <- match_smarts(pen, "C1(=O)NCC1")
 
 # use piping to change the behavior as desired
 depiction() %>%
@@ -61,18 +66,21 @@ depiction() %>%
   depict(pen) %>%
   get_image() %>%
   grid::grid.raster()
+
 ```
 
 ![](man/figures/penicillin_highlight.png)
 
 ## A Larger Example
 
-``` r
+
+
+```r
 insulinmol <- system.file("molfiles/ChEBI_5931.mol", package="depict")
 insulin    <- read_mol(insulinmol)
 
-cysteine <- match_smarts("C(=O)C(CS)N", insulin)
-xlinks   <- match_smarts("SS", insulin)
+cysteine <- match_smarts(insulin, "C(=O)C(CS)N")
+xlinks   <- match_smarts(insulin, "SS")
 
 dp <- depiction()%>% 
   set_size(700, 400) %>%
@@ -83,6 +91,27 @@ dp <- depiction()%>%
   depict(insulin) %>%
   get_image() %>%
   grid::grid.raster()
+
 ```
 
 ![](man/figures/insulin.png)
+
+## Highlight Steroecenters
+
+
+```r
+mol    <- parse_smiles("C[C@H]([C@@H](C(=O)O)N)O")
+stereo <- depict::match_stereo(mol)
+
+
+depiction() %>%
+  highlight_atoms(stereo, color$RED) %>% 
+  set_zoom(3) %>%
+  depict(mol) %>%
+  get_image() %>%
+  grid::grid.raster() 
+  
+```
+
+![](man/figures/highlight_stereo.png)
+
