@@ -58,7 +58,7 @@ match_smarts <- function(mol, smarts, limit=10) {
 #' @export
 match_stereo <- function(mol, stereo_type="any") {
 
-  stypes <-  c("Bicoordinate", "Tricoordinate", "Tetracoordinate")
+  stypes <-  c("any", "Bicoordinate", "Tricoordinate", "Tetracoordinate")
   if (!stereo_type %in% stypes) {
     warning("Sterocenter must be one of Bicoordinate, Tricoordinate, Tetracoordinate or any")  
   }
