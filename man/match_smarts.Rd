@@ -4,12 +4,12 @@
 \alias{match_smarts}
 \title{match_smarts}
 \usage{
-match_smarts(smarts, mol, limit = 10)
+match_smarts(mol, smarts, limit = 10)
 }
 \arguments{
-\item{smarts}{Required. a smarts string}
-
 \item{mol}{Required. an r/CDK AtomContainer}
+
+\item{smarts}{Required. a smarts string}
 
 \item{limit}{Optional. Default \code{10}}
 }
@@ -24,5 +24,5 @@ portions of a chemical \code{depiction}.
 \examples{
 pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 cav    <- parse_smiles("CN1C=NC2=C1C(=O)N(C(=O)N2C)C")
-lactam <- match_smarts("C1(=O)NCC1", pen)
+lactam <- match_smarts(pen, "C1(=O)NCC1")
 }
