@@ -16,8 +16,8 @@
 #' @examples
 #' pen    <- parse_smiles("CC1(C(N2C(S1)C(C2=O)NC(=O)CC3=CC=CC=C3)C(=O)[O-])C penicillin")
 #' cav    <- parse_smiles("CN1C=NC2=C1C(=O)N(C(=O)N2C)C")
-#' lactam <- match_smarts("C1(=O)NCC1", pen)
-match_smarts <- function(smarts, mol, limit=10) {
+#' lactam <- match_smarts(pen, "C1(=O)NCC1")
+match_smarts <- function(mol, smarts, limit=10) {
   hashset       <- J("java/util/HashSet")
   smartspattern <- J("org/openscience/cdk/smiles/smarts/SmartsPattern")
   spattern      <- smartspattern$create(smarts, NULL)
@@ -39,4 +39,59 @@ match_smarts <- function(smarts, mol, limit=10) {
   }
   highlight
 }
+
+
+  
+
+#' match_stereo
+#' 
+#' return a hashset of Atoms that have the specified stereochemistry
+#' 
+#' @param mol Required. an r/CDK AtomContainer
+#' @param stereo_type Required. a stereo option. One of "None", 
+#'   "Bicoordinate", "Tricoordinate", or "Tetracoordinate"
+#' 
+#' @importFrom rJava J
+#' @importFrom rJava new
+#' 
+#' @return a hashset of atoms and bonds
+#' @export
+match_stereo <- function(mol, stereo_type="any") {
+
+  stypes <-  c("Bicoordinate", "Tricoordinate", "Tetracoordinate")
+  if (!stereo_type %in% stypes) {
+    warning("Sterocenter must be one of Bicoordinate, Tricoordinate, Tetracoordinate or any")  
+  }
+
+  hashset   <- J("java/util/HashSet")
+  highlight <- new(hashset)
+  
+  stereos   <- J("org/openscience/cdk/stereo/Stereocenters")
+  highlight <- new(hashset)
+  centers   <- stereos$of(mol)
+  
+  # java is 0-indexed
+  for (i in seq(0, mol$getAtomCount()-1, 1)) {
+    idx_int <- as.integer(i)
+    center  <- centers$isStereocenter(idx_int)
+    
+    if (center == TRUE) {
+      center_type <- centers$elementType(idx_int)
+      
+      if (stereo_type == "any") {
+        atm <- mol$getAtom(idx_int)
+        highlight$add(atm)
+        
+      } else {
+        if (center_type$toString() == stereo_type) {
+          atm <- mol$getAtom(idx_int)
+          highlight$add(atm)
+        }
+      }
+    }
+  }
+  
+  highlight
+}
+
 
